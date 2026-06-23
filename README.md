@@ -4,10 +4,12 @@
 End-to-End Security Operations Center Lab using Wazuh SIEM, Docker, Kali Linux and Metasploitable2.
 
 ![Version](https://img.shields.io/badge/version-v1.0-blue)
-![Platform](https://img.shields.io/badge/platform-Docker-blue)
-![SIEM](https://img.shields.io/badge/SIEM-Wazuh-green)
 ![Status](https://img.shields.io/badge/status-Completed-success)
-
+![SIEM](https://img.shields.io/badge/SIEM-Wazuh-green)
+![Platform](https://img.shields.io/badge/platform-Docker-blue)
+![OS](https://img.shields.io/badge/Linux-Kali-red)
+![Attack Lab](https://img.shields.io/badge/Lab-Metasploitable2-orange)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-purple)
 ---
 ## 📚 Table of Contents
 
