@@ -20,6 +20,19 @@ End-to-End Security Operations Center Lab using Wazuh SIEM, Docker, Kali Linux a
 ![Status](https://img.shields.io/badge/status-Completed-success)
 
 ---
+## 📚 Table of Contents
+
+- Overview
+- Objectives
+- Architecture
+- Tech Stack
+- Attack Simulation
+- Telemetry Generation
+- Alert Analysis
+- MITRE ATT&CK Mapping
+- Features
+- Screenshots
+- Future Enhancements
 ## 🎯 Objectives
 
 - Build a home SOC environment.
@@ -96,26 +109,26 @@ WAZUH_MONITORING_REPLICAS=0         ##
 ```
 ## 🏗 Architecture
 
-```
-Kali Linux VM
+```text
+Kali Linux
 (Metasploit + Nmap)
-        |
-        v
-Metasploitable2 VM
-(Vulnerable Target)
-        |
-        v
+        │
+        ▼
+Metasploitable2
+(Vulnerable Host)
+        │
+        ▼
 Wazuh Agent
-        |
-        v
+        │
+        ▼
 Wazuh Manager
-        |
-        v
+        │
+        ▼
 Wazuh Indexer
-        |
-        v
+        │
+        ▼
 Wazuh Dashboard
-```
+``````
 
 ---
 ## Directory structure
@@ -369,6 +382,18 @@ Investigated:
 - Incident Analysis
 
 ---
+## 🎯 Skills Demonstrated
+
+- SIEM Monitoring
+- Threat Detection
+- File Integrity Monitoring
+- Linux Administration
+- Docker Deployment
+- Incident Investigation
+- Network Enumeration
+- Metasploit Framework
+- MITRE ATT&CK Mapping
+- Endpoint Telemetry Analysis
 ---
 ## 👨‍💻 Author
 
