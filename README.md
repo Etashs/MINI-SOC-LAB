@@ -14,7 +14,9 @@ In this repository you will find the containers to run:
 The folder `build-docker-images` contains a README explaining how to build the Wazuh images and the necessary assets.
 The folder `indexer-certs-creator` contains a README explaining how to create the certificates creator tool and the necessary assets.
 The folder `single-node` contains a README explaining how to run a Wazuh environment with one Wazuh manager, one Wazuh indexer, and one Wazuh dashboard.
-The folder `multi-node` contains a README explaining how to run a Wazuh environment with two Wazuh managers, three Wazuh indexers, and one # 🛡️ MINI SOC LAB v1.0
+The folder `multi-node` contains a README explaining how to run a Wazuh environment with two Wazuh managers, three Wazuh indexers,dashboard. 
+
+# 🛡️ MINI SOC LAB v1.0
 
 End-to-End Security Operations Center Lab using Wazuh SIEM, Docker, Kali Linux and Metasploitable2.
 
