@@ -14,7 +14,34 @@ In this repository you will find the containers to run:
 The folder `build-docker-images` contains a README explaining how to build the Wazuh images and the necessary assets.
 The folder `indexer-certs-creator` contains a README explaining how to create the certificates creator tool and the necessary assets.
 The folder `single-node` contains a README explaining how to run a Wazuh environment with one Wazuh manager, one Wazuh indexer, and one Wazuh dashboard.
-The folder `multi-node` contains a README explaining how to run a Wazuh environment with two Wazuh managers, three Wazuh indexers, and one Wazuh dashboard.
+The folder `multi-node` contains a README explaining how to run a Wazuh environment with two Wazuh managers, three Wazuh indexers, and one # 🛡️ MINI SOC LAB v1.0
+
+End-to-End Security Operations Center Lab using Wazuh SIEM, Docker, Kali Linux and Metasploitable2.
+
+![Version](https://img.shields.io/badge/version-v1.0-blue)
+![Platform](https://img.shields.io/badge/platform-Docker-blue)
+![SIEM](https://img.shields.io/badge/SIEM-Wazuh-green)
+![Status](https://img.shields.io/badge/status-Completed-success)
+
+---
+## 🎯 Objectives
+
+- Build a home SOC environment.
+- Simulate attacks using Metasploit.
+- Generate endpoint telemetry.
+- Analyze security alerts.
+- Perform File Integrity Monitoring (FIM).
+- Understand MITRE ATT&CK techniques.
+- Practice incident investigation.
+
+---
+## 📌 Overview
+
+MINI SOC LAB v1.0 is a self-hosted Security Operations Center environment designed to simulate attacks, generate telemetry, monitor endpoints and investigate security events using Wazuh SIEM.
+
+The project demonstrates attack simulation, telemetry collection, file integrity monitoring, MITRE ATT&CK mapping and incident analysis.
+
+---Wazuh dashboard.
 
 ## Documentation
 
@@ -71,7 +98,30 @@ WAZUH_MONITORING_FREQUENCY=900      # Custom setting to set the frequency for wa
 WAZUH_MONITORING_SHARDS=2           # Configure wazuh-monitoring-* indices shards and replicas
 WAZUH_MONITORING_REPLICAS=0         ##
 ```
+## 🏗 Architecture
 
+```
+Kali Linux VM
+(Metasploit + Nmap)
+        |
+        v
+Metasploitable2 VM
+(Vulnerable Target)
+        |
+        v
+Wazuh Agent
+        |
+        v
+Wazuh Manager
+        |
+        v
+Wazuh Indexer
+        |
+        v
+Wazuh Dashboard
+```
+
+---
 ## Directory structure
 
     ├── build-docker-images
@@ -167,8 +217,54 @@ WAZUH_MONITORING_REPLICAS=0         ##
     │   └── README.md
     └── VERSION.json
 
+## 🔥 Attack Simulation
 
+### Reconnaissance
 
+```bash
+nmap -sV 192.168.56.101
+```
+
+### Vulnerability
+
+- Service : UnrealIRCd
+- Port : 6667
+
+### Exploit
+
+```
+exploit/unix/irc/unreal_ircd_3281_backdoor
+```
+
+### Result
+
+- Meterpreter session established
+- Root shell obtained
+
+---
+## 📊 Telemetry Generation
+
+Generated telemetry includes:
+
+- File Integrity Monitoring (FIM)
+- Authentication Events
+- Command Execution Events
+- Endpoint Inventory Events
+- Telemetry Trends
+
+---
+
+## 🔍 Alert Analysis
+
+Investigated:
+
+- FIM Events
+- Authentication Logs
+- Syscheck Alerts
+- Telemetry Trends
+- Dashboard Events
+
+---
 ## Branches
 
 * `master` branch contains the latest code, be aware of possible bugs on this branch.
@@ -239,7 +335,65 @@ WAZUH_MONITORING_REPLICAS=0         ##
 | v4.0.2        | 1.11.0  |        |
 | v4.0.1        | 1.11.0  |        |
 | v4.0.0        | 1.10.1  |        |
+## 🚀 Tech Stack
 
+### Security Tools
+
+- Wazuh SIEM
+- Metasploit Framework
+- Nmap
+
+### Operating Systems
+
+- Kali Linux
+- Metasploitable2
+
+### Containerization
+
+- Docker
+- Docker Compose
+
+### Virtualization
+
+- VirtualBox
+
+### Version Control
+
+- Git
+- GitHub
+## ✅ Features
+
+- Wazuh Docker Deployment
+- Endpoint Monitoring
+- Attack Simulation
+- Telemetry Generation
+- File Integrity Monitoring
+- Alert Investigation
+- MITRE ATT&CK Mapping
+- Incident Analysis
+
+---
+---
+## 👨‍💻 Author
+
+**Etash**
+
+Cybersecurity Enthusiast | Blue Team | SOC Analyst Aspirant
+
+---
+
+## 🏷 Version
+
+```
+v1.0
+```
+
+Released using:
+
+```bash
+git tag v1.0
+git push origin v1.0
+```
 ## Credits and Thank you
 
 These Docker containers are based on:
